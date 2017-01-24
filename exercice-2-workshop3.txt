@@ -1,0 +1,45 @@
+mysql> select * from Entry where subtype = 'phone' AND contentLineOne LIKE '(3%';                                                        
++-----+---------------+-----------+------------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id  | addressBookId | firstName | lastName   | birthday            | type  | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++-----+---------------+-----------+------------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  18 |             7 | Gabriel   | Alford     | 1997-01-09 02:35:20 | work  | phone   | (374) 698-9200 | NULL           | NULL             | NULL            | NULL            |
+|  21 |            57 | Irene     | Holcomb    | 1969-04-11 23:11:08 | other | phone   | (337) 172-8634 | NULL           | NULL             | NULL            | NULL            |
+|  37 |            85 | Herman    | Ball       | 1992-11-30 10:56:28 | home  | phone   | (309) 886-9975 | NULL           | NULL             | NULL            | NULL            |
+|  47 |            99 | Flavia    | Joyner     | 1953-02-08 09:11:59 | work  | phone   | (396) 700-8740 | NULL           | NULL             | NULL            | NULL            |
+|  52 |            37 | Sophia    | Conway     | 1967-09-20 06:08:24 | other | phone   | (341) 778-8112 | NULL           | NULL             | NULL            | NULL            |
+|  59 |            55 | Serina    | Guzman     | 1951-02-18 00:03:33 | other | phone   | (311) 720-8887 | NULL           | NULL             | NULL            | NULL            |
+|  63 |            25 | Roary     | Webster    | 1965-05-18 22:00:07 | home  | phone   | (395) 194-0578 | NULL           | NULL             | NULL            | NULL            |
+|  65 |            11 | Jade      | Cross      | 1948-10-30 14:43:03 | home  | phone   | (384) 957-8045 | NULL           | NULL             | NULL            | NULL            |
+|  67 |            31 | Renee     | Dyer       | 1984-04-13 18:48:53 | home  | phone   | (319) 153-5073 | NULL           | NULL             | NULL            | NULL            |
+|  69 |            97 | Danielle  | Nash       | 1981-12-31 14:46:48 | home  | phone   | (399) 881-2074 | NULL           | NULL             | NULL            | NULL            |
+|  73 |            76 | Scott     | Trevino    | 1950-12-19 17:28:13 | work  | phone   | (319) 944-2614 | NULL           | NULL             | NULL            | NULL            |
+|  87 |            20 | Porter    | Miller     | 1974-12-17 06:05:55 | other | phone   | (369) 855-6462 | NULL           | NULL             | NULL            | NULL            |
+|  92 |            97 | Jaquelyn  | Vinson     | 1949-03-15 12:00:39 | home  | phone   | (326) 270-3159 | NULL           | NULL             | NULL            | NULL            |
+| 124 |            54 | Isabelle  | Burt       | 1969-07-01 19:29:03 | other | phone   | (364) 105-3832 | NULL           | NULL             | NULL            | NULL            |
+| 130 |            45 | Emi       | Mcfarland  | 1985-10-22 04:33:44 | other | phone   | (307) 672-9023 | NULL           | NULL             | NULL            | NULL            |
+| 135 |            13 | Mira      | Miller     | 1991-11-11 21:48:33 | home  | phone   | (309) 949-3451 | NULL           | NULL             | NULL            | NULL            |
+| 152 |            61 | Dalton    | Cox        | 1978-05-28 23:01:30 | other | phone   | (358) 828-5792 | NULL           | NULL             | NULL            | NULL            |
+| 172 |            88 | Kellie    | Carrillo   | 1990-10-28 13:42:14 | work  | phone   | (341) 237-6719 | NULL           | NULL             | NULL            | NULL            |
+| 173 |            40 | Selma     | Deleon     | 1989-02-12 11:17:59 | work  | phone   | (366) 286-3418 | NULL           | NULL             | NULL            | NULL            |
+| 174 |            12 | Leila     | Dudley     | 1970-10-24 19:10:39 | work  | phone   | (344) 366-8809 | NULL           | NULL             | NULL            | NULL            |
+| 175 |             9 | Pandora   | Chandler   | 2000-04-04 03:30:54 | work  | phone   | (348) 698-0431 | NULL           | NULL             | NULL            | NULL            |
+| 192 |            27 | Penelope  | Irwin      | 1946-08-04 18:38:59 | home  | phone   | (359) 725-3865 | NULL           | NULL             | NULL            | NULL            |
+| 200 |            53 | Sade      | Franks     | 1965-09-22 17:02:25 | home  | phone   | (360) 832-2279 | NULL           | NULL             | NULL            | NULL            |
+| 215 |            81 | Hanae     | Leon       | 1956-04-13 03:53:01 | work  | phone   | (371) 131-8633 | NULL           | NULL             | NULL            | NULL            |
+| 223 |           100 | Cruz      | Tucker     | 1999-03-18 05:28:44 | other | phone   | (331) 806-9900 | NULL           | NULL             | NULL            | NULL            |
+| 229 |            79 | Berk      | Harrington | 1988-04-26 14:41:36 | other | phone   | (358) 517-2385 | NULL           | NULL             | NULL            | NULL            |
+| 230 |            50 | Anthony   | Delacruz   | 1999-01-30 12:02:28 | other | phone   | (367) 703-7792 | NULL           | NULL             | NULL            | NULL            |
+| 234 |            58 | Jena      | Alston     | 1977-05-17 15:57:41 | home  | phone   | (394) 716-3500 | NULL           | NULL             | NULL            | NULL            |
+| 245 |            89 | Joel      | Miller     | 1954-02-16 23:07:38 | work  | phone   | (347) 167-7683 | NULL           | NULL             | NULL            | NULL            |
+| 260 |             8 | Jeremy    | Wynn       | 1982-02-22 19:40:42 | other | phone   | (301) 642-4079 | NULL           | NULL             | NULL            | NULL            |
+| 267 |            56 | Deirdre   | Mccoy      | 1986-03-15 15:03:56 | home  | phone   | (391) 606-0859 | NULL           | NULL             | NULL            | NULL            |
+| 268 |            43 | Reuben    | Charles    | 1988-04-07 20:33:28 | home  | phone   | (394) 100-9308 | NULL           | NULL             | NULL            | NULL            |
+| 280 |            98 | Quinlan   | Reed       | 1957-04-20 23:41:25 | work  | phone   | (336) 975-6423 | NULL           | NULL             | NULL            | NULL            |
+| 314 |            66 | Kevin     | Manning    | 1990-10-16 16:45:28 | work  | phone   | (326) 291-6235 | NULL           | NULL             | NULL            | NULL            |
+| 316 |            42 | Echo      | Whitfield  | 1998-05-03 11:05:05 | work  | phone   | (376) 358-3543 | NULL           | NULL             | NULL            | NULL            |
+| 334 |            99 | Shad      | Hodges     | 1963-05-28 16:26:59 | home  | phone   | (343) 211-1264 | NULL           | NULL             | NULL            | NULL            |
+| 359 |            24 | Warren    | Medina     | 1966-07-21 10:00:06 | other | phone   | (391) 473-7780 | NULL           | NULL             | NULL            | NULL            |
+| 365 |             9 | Rashad    | Horne      | 1950-04-06 19:54:27 | home  | phone   | (367) 420-6903 | NULL           | NULL             | NULL            | NULL            |
+| 399 |            68 | Serina    | Griffith   | 1999-08-30 07:57:48 | home  | phone   | (306) 404-9698 | NULL           | NULL             | NULL            | NULL            |
++-----+---------------+-----------+------------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+39 rows in set (0.00 sec)
