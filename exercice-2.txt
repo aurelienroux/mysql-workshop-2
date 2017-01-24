@@ -1,0 +1,92 @@
+mysql> describe Account;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | NO   |     | NULL    |                |
+| password   | varchar(40)  | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+mysql> INSERT INTO Account VALUES (null, 'example@test.com', 'password', '2016-12-12', '2017-01-23');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM Account;
++----+------------------+----------+---------------------+---------------------+
+| id | email            | password | createdOn           | modifiedOn          |
++----+------------------+----------+---------------------+---------------------+
+|  1 | example@test.com | password | 2016-12-12 00:00:00 | 2017-01-23 00:00:00 |
++----+------------------+----------+---------------------+---------------------+
+1 row in set (0.00 sec)
+
+
+***********************************************
+
+
+mysql> describe AddressBook;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| accountId  | int(11)      | NO   |     | NULL    |                |
+| name       | varchar(255) | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO AddressBook VALUES (null, 20 , 'Aurelien Roux', '2016-12-14', '2017-01-22');                                                                  
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM AddressBook;
++----+-----------+---------------+---------------------+---------------------+
+| id | accountId | name          | createdOn           | modifiedOn          |
++----+-----------+---------------+---------------------+---------------------+
+|  3 |        20 | Aurelien Roux | 2016-12-14 00:00:00 | 2017-01-22 00:00:00 |
++----+-----------+---------------+---------------------+---------------------+
+1 row in set (0.00 sec)
+
+*****************************************
+
+
+mysql> describe Entry;
++------------------+---------------------------------+------+-----+---------+----------------+
+| Field            | Type                            | Null | Key | Default | Extra          |
++------------------+---------------------------------+------+-----+---------+----------------+
+| id               | int(11)                         | NO   | PRI | NULL    | auto_increment |
+| addressBookId    | int(11)                         | NO   |     | NULL    |                |
+| firstName        | varchar(255)                    | NO   |     | NULL    |                |
+| lastName         | varchar(255)                    | YES  |     | NULL    |                |
+| birthday         | datetime                        | YES  |     | NULL    |                |
+| type             | enum('home','work','other')     | NO   |     | NULL    |                |
+| subtype          | enum('phone','address','email') | NO   |     | NULL    |                |
+| contentLineOne   | varchar(255)                    | NO   |     | NULL    |                |
+| contentLineTwo   | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineThree | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFour  | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFive  | varchar(255)                    | YES  |     | NULL    |                |
++------------------+---------------------------------+------+-----+---------+----------------+
+12 rows in set (0.00 sec)
+
+mysql> INSERT INTO Entry VALUES (null, 13, 'Aurelien', 'Roux', '1981-04-02', 'home', 'address', 'Montreal', 'Quebec', 'Canada', 'France', 'Plateau' );                           
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Entry VALUES (null, 13, 'Nathan', 'Roux', '2014-11-04', 'work', 'phone', 'Paris', 'Quebec', 'Canada', 'France', 'Plateau' );                                  
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO Entry VALUES (null, 13, 'Adrien', 'Roux', '2013-01-04', 'other', 'phone', 'Paris', 'Quebec', 'Canada', 'France', 'Rosemont' );                                
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Entry;
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type  | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |            13 | Aurelien  | Roux     | 1981-04-02 00:00:00 | home  | address | Montreal       | Quebec         | Canada           | France          | Plateau         |
+|  2 |            13 | Nathan    | Roux     | 2014-11-04 00:00:00 | work  | phone   | Paris          | Quebec         | Canada           | France          | Plateau         |
+|  3 |            13 | Adrien    | Roux     | 2013-01-04 00:00:00 | other | phone   | Paris          | Quebec         | Canada           | France          | Rosemont        |
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+3 rows in set (0.00 sec)
+
