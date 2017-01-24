@@ -1,0 +1,9 @@
+mysql> SELECT accountId, COUNT(*) FROM AddressBook GROUP BY accountId ORDER BY count(*) DESC LIMIT 3;
++-----------+----------+
+| accountId | count(*) |
++-----------+----------+
+|         5 |       19 |
+|        14 |       19 |
+|        58 |       18 |
++-----------+----------+
+3 rows in set (0.00 sec)
