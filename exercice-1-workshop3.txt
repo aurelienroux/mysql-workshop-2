@@ -7,3 +7,16 @@ mysql> SELECT accountId, COUNT(*) FROM AddressBook GROUP BY accountId ORDER BY c
 |        58 |       18 |
 +-----------+----------+
 3 rows in set (0.00 sec)
+
+
+*************************************
+
+mysql> select addressBookId, count(*) from Entry group by addressBookId order by count(*) desc limit 3;
++---------------+----------+
+| addressBookId | count(*) |
++---------------+----------+
+|            37 |       52 |
+|            20 |       50 |
+|            50 |       49 |
++---------------+----------+
+3 rows in set (0.00 sec)
