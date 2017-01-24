@@ -1,0 +1,15 @@
+mysql> SELECT * FROM Entry;
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type  | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |            14 | Aurelien  | Roux     | 1981-04-02 00:00:00 | home  | address | Montreal       | Quebec         | Canada           | France          | Plateau         |
+|  2 |            14 | Nathan    | Roux     | 2014-11-04 00:00:00 | work  | phone   | Paris          | Quebec         | Canada           | France          | Plateau         |
+|  3 |            14 | Adrien    | Roux     | 2013-01-04 00:00:00 | other | phone   | Paris          | Quebec         | Canada           | France          | Rosemont        |
++----+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+3 rows in set (0.00 sec)
+
+mysql> TRUNCATE Entry;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SELECT * FROM Entry;
+Empty set (0.00 sec)
