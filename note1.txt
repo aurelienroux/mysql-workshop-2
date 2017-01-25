@@ -1,0 +1,35 @@
+select * from expenses, clients where expenses.client_id = clients.id;
+select * from expenses JOIN clients;
+select * from expenses JOIN clients ON expenses.client_id = clients.id;
+just as same as INNER JOIN
+
+select * from expenses LEFT JOIN clients ON expenses.clients_id = clients.id;
+same as LEFT OUTER JOIN
+Give me all the data from the left table;
+
+source filename.ext
+to manipulate data from another file
+
+SELECT
+    expenses.*,
+    clients.name,
+    cities.country
+FROM expenses
+    LEFT JOIN clients ON expenses.client_id = clients.id
+    LEFT JOIN cities ON clients.city = cities.name;
+
+SELECT SUM(amount) FROM expenses GROUP BY client_id;
+select client_id, SUM(amount) form expenses GROUP BY client_id;
+SELECT clients.name, SUM(expenses,amount) FROM expenses JOIN clients ON expenses.client_id = clients.id 
+GROUP BY client_id;
+
+SELECT year(expense_date, month(expense_date), SUM(amount) 
+FROM expenses GROUP BY year(expense_date), month(expense_date);
+
+SELECT SUM(amount) FROM expenses GROUP BY expense_date;
+SELECT year(expense_date), SUM(amount) FROM expenses GROUP BY expense_date;
+
+
+ZIAD ANSWER
+SELECT AccountId count(*) FROM addressBook group by accountId order by count(*) desc limit 1;
+SELECT AccountId count(*) FROM addressBook group by accountId;
